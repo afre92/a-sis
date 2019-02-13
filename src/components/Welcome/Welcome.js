@@ -17,7 +17,7 @@ class Welcome extends Component {
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={require('../../images/vertical_logo.png')}
+            source={require('../../images/horizontal_logo.png')}
           />
           <Text style=''>
             Some random text goes here
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   logo: {
-    width: 120,
-    height: 120
+    width: 210,
+    height: 70
   },
   welcomeImages: {
   },
