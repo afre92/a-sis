@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import Slider from '../Slider/Slider'
 
 import {
   StyleSheet,
@@ -24,6 +25,7 @@ class Welcome extends Component {
           </Text>
         </View>
         <View style={styles.welcomeImages}>
+          <Slider/>
         </View>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.buttonContainer}>
@@ -33,9 +35,6 @@ class Welcome extends Component {
           <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.buttonText}> Create Account </Text>
           </TouchableOpacity>
-
-
-
         </View>
       
       </View>
@@ -57,6 +56,8 @@ const styles = StyleSheet.create({
     height: 70
   },
   welcomeImages: {
+    flex: 1,
+    width: 300
   },
   buttonContainer: {
     backgroundColor: '#813270',
