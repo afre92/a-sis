@@ -33,27 +33,26 @@ export default class extends Component {
 
   render() {
     return (
-
     		<Swiper>
-    			{this.state.imageSlider.map((item, i) => <Slider
-    				uri={item}
-    				key={item}
-    			/>
-    			)}
+    			{this.state.imageSlider.map((item, i) => <Slider uri={item} key={item} />)}
     		</Swiper>
-
     );
   }
 }
 
 const styles = StyleSheet.create({
 	container: {
-		height: 150,
-		justifyContent: 'center'
+		flex: 1,
+		justifyContent: 'center',
+    alignItems: 'center',
 	},
 	image: {
-		flex: 1,
-		width
+		height: 200,
+		width: '80%'
+	},
+	swiper: {
+		justifyContent: 'center',
+    alignItems: 'center',
 	}
 });
 

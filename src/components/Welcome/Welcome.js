@@ -8,7 +8,8 @@ import {
   View,
   Image,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from 'react-native';
 
 class Welcome extends Component {
@@ -20,8 +21,8 @@ class Welcome extends Component {
             style={styles.logo}
             source={require('../../images/horizontal_logo.png')}
           />
-          <Text style=''>
-            Some random text goes here
+          <Text style={styles.subText}>
+            LOGINCreate a accountCREATE AACCOUNTExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           </Text>
         </View>
         <View style={styles.welcomeImages}>
@@ -29,11 +30,11 @@ class Welcome extends Component {
         </View>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.buttonText}> Login </Text>
+            <Text style={styles.buttonText}> CREATE ACCOUNT </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.buttonText}> Create Account </Text>
+            <Text style={styles.buttonText}> LOGIN </Text>
           </TouchableOpacity>
         </View>
       
@@ -41,14 +42,14 @@ class Welcome extends Component {
     );
   }
 }
-
+const {width} = Dimensions.get('window')
 const styles = StyleSheet.create({
   container: {
-    padding: 20
+    padding: 10
   },
   logoContainer: {
+    padding: 20,
     alignItems: 'center',
-    flexGrow: 1,
     justifyContent: 'center'
   },
   logo: {
@@ -57,18 +58,22 @@ const styles = StyleSheet.create({
   },
   welcomeImages: {
     flex: 1,
-    width: 300
   },
   buttonContainer: {
     backgroundColor: '#813270',
     paddingVertical: 15,
-    width: 300,
-    marginBottom: 20
+    width: '90%',
+    marginBottom: 20,
+    marginHorizontal: 20
   },
   buttonText: {
     textAlign: 'center',
     color: '#FFFFFF',
-    fontSize: 23
+    fontSize: 20
+  },
+  subText: {
+    padding: 20,
+    textAlign: 'center'
   }
 
 });
