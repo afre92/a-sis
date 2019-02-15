@@ -1,7 +1,6 @@
 'use strict';
 
 import React, { Component } from 'react';
-import Slider from '../Slider/Slider'
 
 import {
   StyleSheet,
@@ -12,7 +11,7 @@ import {
   Dimensions
 } from 'react-native';
 
-class Welcome extends Component {
+class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -22,11 +21,11 @@ class Welcome extends Component {
             source={require('../../images/horizontal_logo.png')}
           />
           <Text style={styles.subText}>
-            LOGINCreate a accountCREATE AACCOUNTExcepteur sint occaecat cupidatat non proident
+            CREATE AACCOUNT
           </Text>
         </View>
-        <View style={styles.welcomeImages}>
-          <Slider/>
+        <View style={styles.form}>
+          
         </View>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.buttonContainer}>
@@ -42,7 +41,7 @@ class Welcome extends Component {
     );
   }
 }
-const {width} = Dimensions.get('window')
+
 const styles = StyleSheet.create({
   container: {
     padding: 10
@@ -79,5 +78,4 @@ const styles = StyleSheet.create({
 
 });
 
-
-export default Welcome;
+export default Login;

@@ -1,7 +1,6 @@
 'use strict';
 
 import React, { Component } from 'react';
-import Slider from '../Slider/Slider'
 
 import {
   StyleSheet,
@@ -12,7 +11,9 @@ import {
   Dimensions
 } from 'react-native';
 
-class Welcome extends Component {
+import SignUpForm from './SignUpForm'
+
+class SignUp extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -22,19 +23,15 @@ class Welcome extends Component {
             source={require('../../images/horizontal_logo.png')}
           />
           <Text style={styles.subText}>
-            LOGINCreate a accountCREATE AACCOUNTExcepteur sint occaecat cupidatat non proident
+            CREATE AN ACCOUNT
           </Text>
         </View>
-        <View style={styles.welcomeImages}>
-          <Slider/>
+        <View style={styles.formContainer}>
+          <SignUpForm />
         </View>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.buttonText}> CREATE ACCOUNT </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.buttonText}> LOGIN </Text>
+            <Text style={styles.buttonText}> CONTINUE </Text>
           </TouchableOpacity>
         </View>
       
@@ -42,42 +39,41 @@ class Welcome extends Component {
     );
   }
 }
-const {width} = Dimensions.get('window')
+
 const styles = StyleSheet.create({
   container: {
-    padding: 10
+    padding: 10,
+    width: '95%'
   },
   logoContainer: {
     paddingVertical: 50,
     alignItems: 'center',
     justifyContent: 'center'
   },
-  logo: {
-    width: 210,
-    height: 60
-  },
-  welcomeImages: {
-    flex: 1,
-  },
   buttonContainer: {
     backgroundColor: '#813270',
-    paddingVertical: 15,
-    width: '90%',
+    paddingVertical: 20,
     marginBottom: 20,
-    marginHorizontal: 20
+    // marginHorizontal: 20
   },
   buttonText: {
     textAlign: 'center',
     color: '#FFFFFF',
-    fontSize: 15
+    fontSize: 20
   },
   subText: {
     paddingTop: 30,
     textAlign: 'center',
     fontSize: 15
+  },  
+  logo: {
+    width: 210,
+    height: 60
+  },
+  formContainer: {
+    paddingHorizontal: 20
   }
 
 });
 
-
-export default Welcome;
+export default SignUp;

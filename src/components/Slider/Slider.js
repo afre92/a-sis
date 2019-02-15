@@ -42,17 +42,13 @@ export default class extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		height: 300,
 		justifyContent: 'center',
     alignItems: 'center',
 	},
 	image: {
 		height: 200,
 		width: '80%'
-	},
-	swiper: {
-		justifyContent: 'center',
-    alignItems: 'center',
 	}
 });
 
