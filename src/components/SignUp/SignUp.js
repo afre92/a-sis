@@ -8,7 +8,7 @@ import {
   Image,
   Text,
   TouchableOpacity,
-  Dimensions
+  KeyboardAvoidingView
 } from 'react-native';
 
 import SignUpForm from './SignUpForm'
@@ -17,18 +17,20 @@ class SignUp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            source={require('../../images/horizontal_logo.png')}
-          />
-          <Text style={styles.subText}>
-            CREATE AN ACCOUNT
-          </Text>
-        </View>
-        <View style={styles.formContainer}>
-          <SignUpForm />
-        </View>
+       <KeyboardAvoidingView behavior='position'>
+          <View style={styles.logoContainer}>
+            <Image
+              style={styles.logo}
+              source={require('../../images/horizontal_logo.png')}
+            />
+            <Text style={styles.subText}>
+              CREATE AN ACCOUNT
+            </Text>
+          </View>
+          <View style={styles.formContainer}>
+            <SignUpForm />
+          </View>
+        </KeyboardAvoidingView>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.buttonText}> CONTINUE </Text>
@@ -46,15 +48,13 @@ const styles = StyleSheet.create({
     width: '95%'
   },
   logoContainer: {
-    paddingVertical: 50,
+    paddingTop: 40,
     alignItems: 'center',
     justifyContent: 'center'
   },
   buttonContainer: {
     backgroundColor: '#813270',
     paddingVertical: 20,
-    marginBottom: 20,
-    // marginHorizontal: 20
   },
   buttonText: {
     textAlign: 'center',
@@ -62,16 +62,19 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   subText: {
-    paddingTop: 30,
+    paddingTop: 50,
+    paddingBottom: 10,
     textAlign: 'center',
-    fontSize: 15
+    fontSize: 18,
+    fontWeight: '600'
+
   },  
   logo: {
     width: 210,
     height: 60
   },
   formContainer: {
-    paddingHorizontal: 20
+    paddingHorizontal: 15
   }
 
 });

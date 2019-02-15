@@ -14,7 +14,7 @@ class SignUpForm extends Component {
     return (
       <View styles={styles.container}>
       	<View styles={styles.formGroup}>
-					<Text>Full Name</Text>
+					<Text styles={styles.inputLabel} >Full Name</Text>
       		<TextInput style={styles.input} />
       	</View>
       	<View styles={styles.formGroup}>
@@ -23,11 +23,11 @@ class SignUpForm extends Component {
       	</View>
       	<View styles={styles.formGroup}>
 					<Text>Password</Text> 
-      		<TextInput style={styles.input} />
+      		<TextInput secureTextEntry style={styles.input} />
       	</View>
       	<View styles={styles.formGroup}>
-					<Text>Confirm Password</Text> 
-      		<TextInput style={styles.input} />
+					<Text >Confirm Password</Text> 
+      		<TextInput secureTextEntry style={styles.input} />
       	</View>
 				<Text style={styles.subText}>
             TERMS OF SERVICE AND PRIVACY POLICY
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
  container: {
  },
  input: {
+  marginTop: 5,
  	height: 60,
  	backgroundColor: 'white',
  	marginBottom: 20,
@@ -55,7 +56,11 @@ const styles = StyleSheet.create({
  },
  subText: {
 	 textAlign: 'center',
-   paddingVertical: 10
+   paddingBottom: 40,
+   fontSize: 12
+ },
+ inputLabel: {
+  paddingHorizontal: 10
  }
 });
 
