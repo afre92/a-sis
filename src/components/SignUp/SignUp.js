@@ -24,7 +24,7 @@ class SignUp extends Component {
               source={require('../../images/horizontal_logo.png')}
             />
             <Text style={styles.subText}>
-              CREATE AN ACCOUNT
+              Create an Account
             </Text>
           </View>
           <View style={styles.formContainer}>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   subText: {
-    paddingTop: 50,
+    paddingTop: 30,
     paddingBottom: 10,
     textAlign: 'center',
     fontSize: 18,
